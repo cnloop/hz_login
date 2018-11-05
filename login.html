@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        img,
+        ul,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        input,
+        div {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .login-top {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 164px;
+        }
+
+
+        .login-top>img:nth-child(1) {
+            width: 492px;
+            height: auto;
+            position: absolute;
+            top: 86px;
+            left: 284px;
+            z-index: 999;
+        }
+
+        .login-top>img:nth-child(2) {
+            position: absolute;
+            width: 470px;
+            height: auto;
+            top: 246px;
+            left: 390px;
+            z-index: 999;
+        }
+
+        .login-top>.bgcSlide {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            overflow: hidden;
+        }
+
+        .login-top ul {
+            list-style: none;
+            width: 600%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: yellow;
+        }
+
+        .login-top ul>li {
+            float: left;
+            width: calc(100%/6);
+            height: 100%;
+            background-color: #ccc;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .login-top>.loginBox {
+            position: absolute;
+            top: 175px;
+            right: 280px;
+            width: 400px;
+            height: 364px;
+            background-color: rgba(249, 252, 254, 0.4);
+            z-index: 999;
+        }
+
+        .login-top>.loginBox>.top {
+            width: 100%;
+            height: 52px;
+            line-height: 52px;
+            background-color: #1465a3;
+            position: relative;
+        }
+
+        .login-top>.loginBox>.top>.text1 {
+            font-size: 18px;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 90px;
+            transform: translateY(-50%);
+            font-weight: 600;
+        }
+
+        .login-top>.loginBox>.top>.text2 {
+            font-size: 15px;
+            color: #8bedff;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .login-top>.loginBox>.bottom{
+            position: absolute;
+            top: 52px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+        }
+
+        .login-top>.loginBox>.bottom>.accountDiv{
+            width: 300px;
+            height: 42px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+            border: 1px solid #b6bcc3;
+        }
+        .login-top>.loginBox>.bottom>.accountDiv:after{
+            content: "";
+            width: 19px;
+            height: 19px;
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            background:url("./assets/images/login-account-icon.png") center center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            transform: translateY(-50%);
+        }
+
+        .login-top>.loginBox>.bottom>.accountDiv>input{
+            border: none;
+            outline: none;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            padding-left: 42px;
+            box-sizing: border-box; 
+        }
+            
+        .login-top>.loginBox>.bottom>.passwordDiv{
+            width: 300px;
+            height: 42px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 102px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+            border: 1px solid #b6bcc3;
+        }
+
+        .login-top>.loginBox>.bottom>.passwordDiv:after{
+            content: "";
+            width: 19px;
+            height: 19px;
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            background: url("./assets/images/login-pwd-icon.png") center center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            transform: translateY(-50%);
+        }
+
+        .login-top>.loginBox>.bottom>.passwordDiv>input{
+            border: none;
+            outline: none;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            padding-left: 42px;
+            box-sizing: border-box;   
+        }
+            
+
+        .login-top>.loginBox>.bottom>.autoLogin{
+            position:absolute;
+            width: 300px;
+            height: 20px;
+            top: 166px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #696464;
+            font-size: 15px;
+        }
+
+        .login-top>.loginBox>.bottom>.autoLogin>span{
+            margin-left: 8px;
+            display: inline-block;
+            transform: translateY(-2px);
+        }
+
+        .login-top>.loginBox>.bottom>.loginBtn{
+            width: 300px;
+            height: 48px;
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #1465a3;
+            color: #fff;
+            font-size: 20px;
+            line-height: 48px;
+            text-align: center;
+            cursor: pointer;
+            letter-spacing: 8px;
+        } 
+        .login-top>.loginBox>.bottom>.loginRegister{
+            position:absolute;
+            bottom: 20px;
+            right: 50px;
+        }
+        .login-top>.loginBox>.bottom>.loginRegister>a{
+            color: #333;
+            text-decoration: none;
+        }
+        .login-top>.loginByPhone{
+            position: absolute;
+            top: 175px;
+            right: 280px;
+            width: 400px;
+            height: 332px;
+            background-color: rgba(249, 252, 254, 0.4);
+            z-index: 999;
+        }
+        .login-top>.loginByPhone>.top {
+            width: 100%;
+            height: 52px;
+            line-height: 52px;
+            background-color: #1465a3;
+            position: relative;
+        }
+
+        .login-top>.loginByPhone>.top>.text1 {
+            font-size: 18px;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 90px;
+            transform: translateY(-50%);
+            font-weight: 600;
+        }
+
+        .login-top>.loginByPhone>.top>.text2 {
+            font-size: 15px;
+            color: #8bedff;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .login-top>.loginByPhone>.bottom{
+            position: absolute;
+            top: 52px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+        }
+
+        .login-top>.loginByPhone>.bottom>.phoneNumber{
+            width: 300px;
+            height: 42px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 38px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+            border: 1px solid #b6bcc3;
+        }
+        .login-top>.loginByPhone>.bottom>.phoneNumber:after{
+            content: "";
+            width: 19px;
+            height: 19px;
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            background:url("./assets/images/login-account-icon.png") center center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            transform: translateY(-50%);
+        }
+
+        .login-top>.loginByPhone>.bottom>.phoneNumber>input{
+            border: none;
+            outline: none;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            padding-left: 42px;
+            box-sizing: border-box; 
+        }
+
+        .login-top>.loginByPhone>.bottom>.DynamicPwdContainer{
+            width: 300px;
+            height: 42px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 104px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .login-top>.loginByPhone>.bottom>.DynamicPwdContainer>.DynamicPwd{
+            width: 170px;
+            height: 42px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border-radius: 5px;
+            border: 1px solid #b6bcc3;
+        }
+
+        .login-top>.loginByPhone>.bottom>.DynamicPwdContainer>.DynamicPwd:after{
+            content: "";
+            width: 19px;
+            height: 19px;
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            background: url("./assets/images/login-pwd-icon.png") center center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            transform: translateY(-50%);
+        }
+
+        .login-top>.loginByPhone>.bottom>.DynamicPwdContainer>.DynamicPwd>input{
+            border: none;
+            outline: none;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            padding-left: 42px;
+            box-sizing: border-box;   
+        }
+
+        .login-top>.loginByPhone>.bottom>.DynamicPwdContainer>.getDynamicPwdBtn{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 110px;
+            height: 42px;
+            border-radius: 5px;
+            border: 1px solid #1465a3;
+            line-height: 42px;
+            text-align: center;
+            font-size: 15px;
+            color: #1465a3;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .login-top>.loginByPhone>.bottom>.loginBtn{
+            width: 300px;
+            height: 48px;
+            position: absolute;
+            top: 170px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #1465a3;
+            color: #fff;
+            font-size: 20px;
+            line-height: 48px;
+            text-align: center;
+            cursor: pointer;
+            letter-spacing: 8px;
+        } 
+        .login-top>.loginByPhone>.bottom>.loginRegister{
+            position:absolute;
+            bottom: 20px;
+            right: 50px;
+        }
+        .login-top>.loginByPhone>.bottom>.loginRegister>a{
+            color: #333;
+            text-decoration: none;
+        }
+        .login-bottom {
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            height: 164px;
+            background-color: #eee;
+        }
+
+        .login-bottom>.container {
+            width: 1134px;
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 14px;
+            color: #333;
+        }
+
+        .login-bottom>.container>img {
+            width: 50px;
+            height: auto;
+            position: absolute;
+            top: 11px;
+            left: 7px;
+        }
+
+        .login-bottom>.container>.text {
+            margin-left: 70px;
+        }
+
+        .login-bottom>.container a {
+            color: #333;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-top">
+        <img src="./assets/images/login-title-icon.png">
+        <img src="./assets/images/login-sub-icon.png">
+        <div class="bgcSlide" id="scrollContent">
+            <ul>
+                <li style="background-image:url('./assets/images/login-banner-bg1.png')"></li>
+                <li style="background-image:url('./assets/images/login-banner-bg2.png')"></li>
+                <li style="background-image:url('./assets/images/login-banner-bg3.png')"></li>
+                <li style="background-image:url('./assets/images/login-banner-bg4.png')"></li>
+                <li style="background-image:url('./assets/images/login-banner-bg5.png')"></li>
+                <li style="background-image:url('./assets/images/login-banner-bg1.png')"></li>
+            </ul>
+        </div>
+        <div class="loginBox" id="loginBox">
+            <div class="top">
+                <img src="./assets/images/login-vip-icon.png" height="100%">
+                <span class="text1">账号密码登陆</span>
+                <span class="text2" onclick="switchLogin('loginByPhone')">短信快捷登陆></span>
+            </div>
+            <div class="bottom">
+                <div class="accountDiv">
+                    <input type="text" placeholder="用户名/身份证号">
+                </div>
+                <div class="passwordDiv">
+                    <input type="password" placeholder="请输入密码">
+                </div>
+                <div class="autoLogin">
+                    <input type="checkbox" name="" id="">
+                    <span>下次自动登陆（公共场所慎用）</span>
+                </div>
+                <div class="loginBtn">
+                    <span>登陆</span>
+                </div>
+                <div class="loginRegister">
+                    <a href="" onclick="return false">注册</a>
+                    <span>&nbsp;|&nbsp;</span>
+                    <a href="" onclick="return false">忘记密码？</a>
+                </div>
+            </div>
+        </div>
+        <div style="display:none" id="loginByPhone" class="loginByPhone">
+            <div class="top">
+                <img src="./assets/images/login-vip-icon.png" height="100%">
+                <span class="text1">短信快捷登陆</span>
+                <span class="text2" onclick="switchLogin('loginBox')">账号密码登陆></span>
+            </div>
+            <div class="bottom">
+                <div class="phoneNumber">
+                    <input type="text" placeholder="输入手机号">
+                </div>
+                <div class="DynamicPwdContainer">
+                    <div class="DynamicPwd">
+                        <input type="password" placeholder="请输入动态密码">
+                    </div>
+                    <div class="getDynamicPwdBtn">
+                        <span>获取动态密码</span>
+                    </div>
+                </div>
+                <div class="loginBtn">
+                    <span>登陆</span>
+                </div>
+                <div class="loginRegister">
+                    <a href="" onclick="return false">注册</a>
+                    <span>&nbsp;|&nbsp;</span>
+                    <a href="" onclick="return false">忘记密码？</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="login-bottom">
+        <div class="container">
+            <img src="./assets/images/login-gov-icon.png">
+            <div class="text">
+                <p>
+                    <span>
+                        关于安徽省河长制决策支持系统&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" onclick="return false;">本站声明</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                            href="" onclick="return false;">帮助中心</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="" onclick="return false;">反馈建议</a>
+                    </span>
+                </p>
+                <p>
+                    <span>
+                        主办单位：安徽省全面推行河长制办公室
+                    </span>
+                    <span style="margin-left:45px">
+                        运行维护单位：安徽省（水利部淮河水利委员会）水利科学研究院
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var scrollContent = document.getElementById("scrollContent");
+        var scrollUl = scrollContent.children[0];
+        var imgWidth = scrollContent.offsetWidth;
+        var timer = setInterval(autoPaly, 7000);
+        var key = 0;
+
+        function autoPaly() {
+            key++;
+            if (key > scrollUl.children.length - 1) {
+                scrollUl.style.left = "0px";
+                key = 1;
+            }
+            animate(scrollUl, -key * imgWidth);
+        }
+        // 轮播算法
+        function animate(ele, target) {
+            clearInterval(ele.timer);
+            var speed = ele.offsetLeft < target ? 15 : -15;
+            ele.timer = setInterval(function () {
+                ele.style.left = ele.offsetLeft + speed + "px";
+                var value = ele.offsetLeft - target;
+                if (Math.abs(value) <= Math.abs(speed)) {
+                    ele.style.left = target + "px";
+                    clearInterval(ele.timer);
+                }
+            }, 10);
+        }
+    </script>
+    <script>
+        var loginBox = document.getElementById('loginBox');
+        var loginByPhone = document.getElementById('loginByPhone');
+
+        function switchLogin(str) {
+            if (str == "loginBox") {
+                loginBox.style.display = "block";
+                loginByPhone.style.display = "none";
+            } else {
+                loginByPhone.style.display = "block";
+                loginBox.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
