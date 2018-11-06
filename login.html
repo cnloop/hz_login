@@ -18,6 +18,7 @@
         h4,
         h5,
         h6,
+        p,
         input,
         div {
             margin: 0px;
@@ -35,7 +36,7 @@
             top: 0px;
             left: 0px;
             right: 0px;
-            bottom: 164px;
+            bottom: 18%;
         }
 
 
@@ -43,8 +44,10 @@
             width: 492px;
             height: auto;
             position: absolute;
-            top: 86px;
-            left: 284px;
+            /* top: 86px;
+            left: 284px; */
+            top: 12%;
+            left: 10%;
             z-index: 999;
         }
 
@@ -52,8 +55,10 @@
             position: absolute;
             width: 470px;
             height: auto;
-            top: 246px;
-            left: 390px;
+            /* top: 246px;
+            left: 390px; */
+            top: 29%;
+            left: 17%;
             z-index: 999;
         }
 
@@ -86,17 +91,29 @@
             background-size: cover;
         }
 
-        .login-top>.loginBox {
+        .login-top>.loginContainer{
             position: absolute;
-            top: 175px;
-            right: 280px;
+            top: 20%;
+            right: 5%;
+            width: 500px;
+            z-index: 999;
+        }
+
+        .login-top>.loginContainer>.loginBox {
+            position: absolute;
+            /* top: 175px;
+            right: 280px; */
+            /* top: 20%; */
+            /* right: 5%; */
+            top: 0px;
+            right: 0px;
             width: 400px;
             height: 364px;
             background-color: rgba(249, 252, 254, 0.4);
             z-index: 999;
         }
 
-        .login-top>.loginBox>.top {
+        .login-top>.loginContainer>.loginBox>.top {
             width: 100%;
             height: 52px;
             line-height: 52px;
@@ -104,7 +121,15 @@
             position: relative;
         }
 
-        .login-top>.loginBox>.top>.text1 {
+        .login-top>.loginContainer>.loginBox>.top>img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        
+
+        .login-top>.loginContainer>.loginBox>.top>.text1 {
             font-size: 18px;
             color: #fff;
             position: absolute;
@@ -114,7 +139,7 @@
             font-weight: 600;
         }
 
-        .login-top>.loginBox>.top>.text2 {
+        .login-top>.loginContainer>.loginBox>.top>.text2 {
             font-size: 15px;
             color: #8bedff;
             position: absolute;
@@ -125,7 +150,7 @@
             cursor: pointer;
         }
 
-        .login-top>.loginBox>.bottom{
+        .login-top>.loginContainer>.loginBox>form>.bottom{
             position: absolute;
             top: 52px;
             bottom: 0px;
@@ -133,7 +158,7 @@
             right: 0px;
         }
 
-        .login-top>.loginBox>.bottom>.accountDiv{
+        .login-top>.loginContainer>.loginBox>form>.bottom>.accountDiv{
             width: 300px;
             height: 42px;
             box-sizing: border-box;
@@ -144,7 +169,7 @@
             border-radius: 5px;
             border: 1px solid #b6bcc3;
         }
-        .login-top>.loginBox>.bottom>.accountDiv:after{
+        .login-top>.loginContainer>.loginBox>form>.bottom>.accountDiv:after{
             content: "";
             width: 19px;
             height: 19px;
@@ -157,7 +182,7 @@
             transform: translateY(-50%);
         }
 
-        .login-top>.loginBox>.bottom>.accountDiv>input{
+        .login-top>.loginContainer>.loginBox>form>.bottom>.accountDiv>input{
             border: none;
             outline: none;
             width: 100%;
@@ -167,7 +192,7 @@
             box-sizing: border-box; 
         }
             
-        .login-top>.loginBox>.bottom>.passwordDiv{
+        .login-top>.loginContainer>.loginBox>form>.bottom>.passwordDiv{
             width: 300px;
             height: 42px;
             box-sizing: border-box;
@@ -179,7 +204,7 @@
             border: 1px solid #b6bcc3;
         }
 
-        .login-top>.loginBox>.bottom>.passwordDiv:after{
+        .login-top>.loginContainer>.loginBox>form>.bottom>.passwordDiv:after{
             content: "";
             width: 19px;
             height: 19px;
@@ -192,7 +217,7 @@
             transform: translateY(-50%);
         }
 
-        .login-top>.loginBox>.bottom>.passwordDiv>input{
+        .login-top>.loginContainer>.loginBox>form>.bottom>.passwordDiv>input{
             border: none;
             outline: none;
             width: 100%;
@@ -203,7 +228,7 @@
         }
             
 
-        .login-top>.loginBox>.bottom>.autoLogin{
+        .login-top>.loginContainer>.loginBox>form>.bottom>.autoLogin{
             position:absolute;
             width: 300px;
             height: 20px;
@@ -214,13 +239,13 @@
             font-size: 15px;
         }
 
-        .login-top>.loginBox>.bottom>.autoLogin>span{
+        .login-top>.loginContainer>.loginBox>form>.bottom>.autoLogin>span{
             margin-left: 8px;
             display: inline-block;
             transform: translateY(-2px);
         }
 
-        .login-top>.loginBox>.bottom>.loginBtn{
+        .login-top>.loginContainer>.loginBox >form>.bottom>.loginBtn{
             width: 300px;
             height: 48px;
             position: absolute;
@@ -235,25 +260,25 @@
             cursor: pointer;
             letter-spacing: 8px;
         } 
-        .login-top>.loginBox>.bottom>.loginRegister{
+        .login-top>.loginContainer>.loginBox>form>.bottom>.loginRegister{
             position:absolute;
             bottom: 20px;
             right: 50px;
         }
-        .login-top>.loginBox>.bottom>.loginRegister>a{
+        .login-top>.loginContainer>.loginBox>form>.bottom>.loginRegister>a{
             color: #333;
             text-decoration: none;
         }
-        .login-top>.loginByPhone{
+        .login-top>.loginContainer>.loginByPhone{
             position: absolute;
-            top: 175px;
-            right: 280px;
+            top: 0px;
+            right: 0px;
             width: 400px;
             height: 332px;
             background-color: rgba(249, 252, 254, 0.4);
             z-index: 999;
         }
-        .login-top>.loginByPhone>.top {
+        .login-top>.loginContainer>.loginByPhone>.top {
             width: 100%;
             height: 52px;
             line-height: 52px;
@@ -261,7 +286,13 @@
             position: relative;
         }
 
-        .login-top>.loginByPhone>.top>.text1 {
+        .login-top>.loginContainer>.loginByPhone>.top>img{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        .login-top>.loginContainer>.loginByPhone>.top>.text1 {
             font-size: 18px;
             color: #fff;
             position: absolute;
@@ -271,7 +302,7 @@
             font-weight: 600;
         }
 
-        .login-top>.loginByPhone>.top>.text2 {
+        .login-top>.loginContainer>.loginByPhone>.top>.text2 {
             font-size: 15px;
             color: #8bedff;
             position: absolute;
@@ -281,7 +312,7 @@
             font-weight: 600;
             cursor: pointer;
         }
-        .login-top>.loginByPhone>.bottom{
+        .login-top>.loginContainer>.loginByPhone>form>.bottom{
             position: absolute;
             top: 52px;
             bottom: 0px;
@@ -289,7 +320,7 @@
             right: 0px;
         }
 
-        .login-top>.loginByPhone>.bottom>.phoneNumber{
+        .login-top>.loginContainer>.loginByPhone>form>.bottom>.phoneNumber{
             width: 300px;
             height: 42px;
             box-sizing: border-box;
@@ -300,7 +331,7 @@
             border-radius: 5px;
             border: 1px solid #b6bcc3;
         }
-        .login-top>.loginByPhone>.bottom>.phoneNumber:after{
+        .login-top>.loginContainer>.loginByPhone>form>.bottom>.phoneNumber:after{
             content: "";
             width: 19px;
             height: 19px;
@@ -313,7 +344,7 @@
             transform: translateY(-50%);
         }
 
-        .login-top>.loginByPhone>.bottom>.phoneNumber>input{
+        .login-top>.loginContainer>.loginByPhone>form>.bottom>.phoneNumber>input{
             border: none;
             outline: none;
             width: 100%;
@@ -323,7 +354,7 @@
             box-sizing: border-box; 
         }
 
-        .login-top>.loginByPhone>.bottom>.DynamicPwdContainer{
+        .login-top>.loginContainer>.loginByPhone>form>.bottom>.DynamicPwdContainer{
             width: 300px;
             height: 42px;
             box-sizing: border-box;
@@ -333,7 +364,7 @@
             transform: translateX(-50%);
         }
 
-        .login-top>.loginByPhone>.bottom>.DynamicPwdContainer>.DynamicPwd{
+        .login-top>.loginContainer>.loginByPhone>form>.bottom>.DynamicPwdContainer>.DynamicPwd{
             width: 170px;
             height: 42px;
             position: absolute;
@@ -343,7 +374,7 @@
             border: 1px solid #b6bcc3;
         }
 
-        .login-top>.loginByPhone>.bottom>.DynamicPwdContainer>.DynamicPwd:after{
+        .login-top>.loginContainer>.loginByPhone>form>.bottom>.DynamicPwdContainer>.DynamicPwd:after{
             content: "";
             width: 19px;
             height: 19px;
@@ -356,7 +387,7 @@
             transform: translateY(-50%);
         }
 
-        .login-top>.loginByPhone>.bottom>.DynamicPwdContainer>.DynamicPwd>input{
+        .login-top>.loginContainer>.loginByPhone>form>.bottom>.DynamicPwdContainer>.DynamicPwd>input{
             border: none;
             outline: none;
             width: 100%;
@@ -366,7 +397,7 @@
             box-sizing: border-box;   
         }
 
-        .login-top>.loginByPhone>.bottom>.DynamicPwdContainer>.getDynamicPwdBtn{
+        .login-top>.loginContainer>.loginByPhone>form>.bottom>.DynamicPwdContainer>.getDynamicPwdBtn{
             position: absolute;
             top: 0px;
             right: 0px;
@@ -382,7 +413,7 @@
             cursor: pointer;
         }
 
-        .login-top>.loginByPhone>.bottom>.loginBtn{
+        .login-top>.loginContainer>.loginByPhone>form>.bottom>.loginBtn{
             width: 300px;
             height: 48px;
             position: absolute;
@@ -397,12 +428,12 @@
             cursor: pointer;
             letter-spacing: 8px;
         } 
-        .login-top>.loginByPhone>.bottom>.loginRegister{
+        .login-top>.loginContainer>.loginByPhone>form>.bottom>.loginRegister{
             position:absolute;
             bottom: 20px;
             right: 50px;
         }
-        .login-top>.loginByPhone>.bottom>.loginRegister>a{
+        .login-top>.loginContainer>.loginByPhone>form>.bottom>.loginRegister>a{
             color: #333;
             text-decoration: none;
         }
@@ -411,7 +442,8 @@
             left: 0px;
             right: 0px;
             bottom: 0px;
-            height: 164px;
+            /* height: 164px; */
+            height: 18%;
             background-color: #eee;
         }
 
@@ -435,13 +467,62 @@
         }
 
         .login-bottom>.container>.text {
-            margin-left: 70px;
+            position:absolute;
+            top: 14px;
+            left: 70px;
+        }
+
+        .login-bottom>.container>.text>p{
+            height: 30px;
         }
 
         .login-bottom>.container a {
             color: #333;
             text-decoration: none;
         }
+
+        .errAlert{
+            position:absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            height: 45px;
+            z-index: 1000;
+            display: none;
+            background-color: #f2bdb1;
+        }
+        .errAlert>.container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .errAlert>.container>img{
+            width: 22px;
+            vertical-align: middle;
+        }
+
+        .errAlert>.container>span{
+            display: inline-block;
+            color: #ea5200;
+            font-weight: bold;
+            font-size: 16px;
+            transform: translateY(2px);
+            margin-left: 10px;
+        }
+
+        .errAlert>i{
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            font-weight: bold;
+            color: #756969;
+            font-style: normal;
+            cursor: pointer;
+        }
+
+            
     </style>
 </head>
 
@@ -459,61 +540,68 @@
                 <li style="background-image:url('./assets/images/login-banner-bg1.png')"></li>
             </ul>
         </div>
-        <div class="loginBox" id="loginBox">
-            <div class="top">
-                <img src="./assets/images/login-vip-icon.png" height="100%">
-                <span class="text1">账号密码登陆</span>
-                <span class="text2" onclick="switchLogin('loginByPhone')">短信快捷登陆></span>
+        <div class="loginContainer">
+            <div class="loginBox" id="loginBox">
+                <div class="top">
+                    <img src="./assets/images/login-vip-icon.png" height="100%">
+                    <span class="text1">账号密码登陆</span>
+                    <span class="text2" onclick="switchLogin('loginByPhone')">短信快捷登陆&nbsp;></span>
+                </div>
+                <form>
+                    <div class="bottom">
+                        <div class="accountDiv">
+                            <input type="text" placeholder="用户名/身份证号">
+                        </div>
+                        <div class="passwordDiv">
+                            <input type="password" placeholder="请输入密码">
+                        </div>
+                        <div class="autoLogin">
+                            <input type="checkbox" name="" id="">
+                            <span>下次自动登陆（公共场所慎用）</span>
+                        </div>
+                        <div class="loginBtn">
+                            <span>登陆</span>
+                        </div>
+                        <div class="loginRegister">
+                            <a href="" onclick="return false">注册</a>
+                            <span>&nbsp;|&nbsp;</span>
+                            <a href="" onclick="return false">忘记密码？</a>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="bottom">
-                <div class="accountDiv">
-                    <input type="text" placeholder="用户名/身份证号">
+            <div style="display:none" id="loginByPhone" class="loginByPhone">
+                <div class="top">
+                    <img src="./assets/images/login-vip-icon.png" height="100%">
+                    <span class="text1">短信快捷登陆</span>
+                    <span class="text2" onclick="switchLogin('loginBox')">账号密码登陆&nbsp;></span>
                 </div>
-                <div class="passwordDiv">
-                    <input type="password" placeholder="请输入密码">
-                </div>
-                <div class="autoLogin">
-                    <input type="checkbox" name="" id="">
-                    <span>下次自动登陆（公共场所慎用）</span>
-                </div>
-                <div class="loginBtn">
-                    <span>登陆</span>
-                </div>
-                <div class="loginRegister">
-                    <a href="" onclick="return false">注册</a>
-                    <span>&nbsp;|&nbsp;</span>
-                    <a href="" onclick="return false">忘记密码？</a>
-                </div>
+                <form action="">
+                    <div class="bottom">
+                        <div class="phoneNumber">
+                            <input type="text" placeholder="输入手机号">
+                        </div>
+                        <div class="DynamicPwdContainer">
+                            <div class="DynamicPwd">
+                                <input type="password" placeholder="请输入动态密码">
+                            </div>
+                            <div class="getDynamicPwdBtn">
+                                <span>获取动态密码</span>
+                            </div>
+                        </div>
+                        <div class="loginBtn">
+                            <span>登陆</span>
+                        </div>
+                        <div class="loginRegister">
+                            <a href="" onclick="return false">注册</a>
+                            <span>&nbsp;|&nbsp;</span>
+                            <a href="" onclick="return false">忘记密码？</a>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-        <div style="display:none" id="loginByPhone" class="loginByPhone">
-            <div class="top">
-                <img src="./assets/images/login-vip-icon.png" height="100%">
-                <span class="text1">短信快捷登陆</span>
-                <span class="text2" onclick="switchLogin('loginBox')">账号密码登陆></span>
-            </div>
-            <div class="bottom">
-                <div class="phoneNumber">
-                    <input type="text" placeholder="输入手机号">
-                </div>
-                <div class="DynamicPwdContainer">
-                    <div class="DynamicPwd">
-                        <input type="password" placeholder="请输入动态密码">
-                    </div>
-                    <div class="getDynamicPwdBtn">
-                        <span>获取动态密码</span>
-                    </div>
-                </div>
-                <div class="loginBtn">
-                    <span>登陆</span>
-                </div>
-                <div class="loginRegister">
-                    <a href="" onclick="return false">注册</a>
-                    <span>&nbsp;|&nbsp;</span>
-                    <a href="" onclick="return false">忘记密码？</a>
-                </div>
-            </div>
-        </div>
+
     </div>
     <div class="login-bottom">
         <div class="container">
@@ -535,6 +623,13 @@
                 </p>
             </div>
         </div>
+    </div>
+    <div class="errAlert" id="errAlert">
+        <div class="container">
+            <img src="./assets/images/unchecked.gif">
+            <span>用户或者密码错误，请重试</span>
+        </div>
+        <i onclick="hideErrAlert()">x</i>
     </div>
 
     <script>
@@ -578,6 +673,14 @@
                 loginByPhone.style.display = "block";
                 loginBox.style.display = "none";
             }
+        }
+    </script>
+    <!-- 隐藏错误弹出框 -->
+    <script>
+        var errAlert = document.getElementById("errAlert");
+
+        function hideErrAlert() {
+            errAlert.style.display = "none"
         }
     </script>
 </body>
